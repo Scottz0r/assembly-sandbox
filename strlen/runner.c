@@ -76,7 +76,7 @@ void test_my_strlen_safe()
 
     // No null terminator case.
     memset(buffer, 'A', sizeof(buffer));
-    actual = my_strlen_safe(NULL, sizeof(buffer));
+    actual = my_strlen_safe(buffer, sizeof(buffer));
     printf("No string null terminator (expect %lu) => %lu\n", sizeof(buffer), actual);
 
     // Less size than buffer specified case.
