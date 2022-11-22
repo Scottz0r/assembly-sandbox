@@ -65,7 +65,9 @@ my_strlen_safe:
     ; Initialize rax to the start of the string.
     mov rax, rdi
 
-    ; Null pointer case. Safe to jump
+    ; Null pointer case. Safe to jump to the return block
+    ; because rax will be the same address as rdi, resulting
+    ; in 0 length.
     cmp rdi, 0
     je .return
 
